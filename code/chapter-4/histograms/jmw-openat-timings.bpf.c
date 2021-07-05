@@ -1,4 +1,7 @@
-#include <uapi/linux/ptrace.h>
+#if __BCC__
+#include "bpf_load.h"
+#include <stdio.h>
+#endif
 
 BPF_HASH(pid_timestamps, u64, u64); // PID --> timestamp
 BPF_HISTOGRAM(syscall_timings);     // duration in ns from beginning of sys_enter_* to sys_exit_*
