@@ -2,7 +2,7 @@ CLANG = clang
 
 EXECABLE = jmw-loader
 
-BPFCODE = jmw-openat-timings.bpf
+BPFCODE = jmw-openat-timings.bpf jmw-openat-entry.bpf
 
 BPFTOOLS = /kernel-src/samples/bpf
 BPFLOADER = $(BPFTOOLS)/bpf_load.c
